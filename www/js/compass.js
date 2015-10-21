@@ -2,7 +2,7 @@
 var img = null,
 	needle = null,
 	ctx = null,
-	gWatchID = null;
+	compassWatchID = null;
 	document.addEventListener("deviceready", onDeviceReady, false);
 
 function clearCanvas() {
@@ -40,30 +40,30 @@ function init() {
 	}
 }
 
-function onError(compassError) {
+function onErrorCompass(compassError) {
 	alert('Compass error: ' + compassError.code);
 }
 
-function stopWatch() {
-    if (gWatchID) {
+function stopWatchCompass() {
+    if (compassWatchID) {
         navigator.compass.clearWatch(watchID);
-        gWatchID = null;
+        compassWatchID = null;
     }
 }
 
-function startWatch() {
+function startCompass() {
     var options = { frequency: 100 };
-    if (!gWatchID) {
-        gWatchID = navigator.compass.watchHeading(onSuccess, onError, options);
+    if (!compassWatchID) {
+        compassWatchID = navigator.compass.watchHeading(onSuccessCompass, onErrorCompass, options);
     }
 }
 
 function onDeviceReady() {
 	init();
-    startWatch();
+    startCompass();
 }
 
-function onSuccess(heading) {
+function onSuccessCompass(heading) {
     var value = Math.round(heading.magneticHeading);
     var element = document.getElementById("infoCompass");
     element.innerHTML = "Valor: " + value +"°";
