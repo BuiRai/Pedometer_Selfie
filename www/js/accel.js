@@ -88,3 +88,17 @@ function onErrorAccel() {
     var element = document.getElementById('info');
     element.innerHTML = 'Sorry, I was unable to access the acceleration data.';
 }
+
+//Function to restart the pedometer
+function restartAccel(){
+    if ( !accelWatchID ) {
+        var options = {
+            frequency : 500
+        };
+
+        accelWatchID = navigator.accelerometer.watchAcceleration(onSuccessAccel, onErrorAccel,
+            options);
+    }
+
+    totalSteps = 0;
+}
