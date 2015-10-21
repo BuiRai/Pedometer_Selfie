@@ -52,7 +52,7 @@ function stopWatch() {
 }
 
 function startWatch() {
-    var options = { frequency: 10 };
+    var options = { frequency: 100 };
     if (!gWatchID) {
         gWatchID = navigator.compass.watchHeading(onSuccess, onError, options);
     }
