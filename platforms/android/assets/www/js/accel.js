@@ -63,6 +63,9 @@ function onSuccessAccel(acceleration) {
     var stepsDiv = document.getElementById('steps');
     stepsDiv.innerHTML = "pasos: " + totalSteps;
 
+    //Call to the function to calculate the calories
+    calculateCalories();
+
 }
 
 function updatePedometer(){
@@ -101,4 +104,15 @@ function restartAccel(){
     }
 
     totalSteps = 0;
+}
+
+//Source: http://www.ehow.com/how_5622158_convert-steps-calories-burned.html
+//walking 1 mile requires an average of 2,000 steps and burns about 100 calories
+//approximately one calorie every 20 steps or 0.05 calories per step
+//Calculate calories:
+function calculateCalories(){
+    var totalCalories = totalSteps * 0.05;
+    var caloriesDiv = document.getElementById('calories');
+    caloriesDiv.innerHTML = "Calorias quemadas: " + totalCalories + " cal" + "<br>"
+        + "Kcalorias quemadas: " + totalCalories/1000 + " Kcal";
 }
