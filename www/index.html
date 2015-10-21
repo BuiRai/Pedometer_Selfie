@@ -6,15 +6,20 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/compass.js"></script>
         <script type="text/javascript" src="js/accel.js"></script>
+        <link rel="stylesheet" href="themes/troop-theme.min.css" />
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     </head>
     <body>
-    	<p id="axisInfo"></p>
-    	<p id="steps"></p>
+        <p id="axisInfo"></p>
+        <p id="steps"></p>
         <canvas id="compass" width="200" height="200"></canvas>
         <div id="infoCompass">Valor: </div>
-        <button onclick="startWatchAccel()">Comenzar el podometro</button>
-        <button onclick="restartAccel()">Reiniciar</button>
-        <button onclick="stopWatchAccel()">Detener</button>
-        <button onclick="startWatchAccel()">Continuar</button>
+        <button data-theme="a" onclick="startWatchAccel()">Comenzar el podómetro</button>
+        <button data-theme="a" onclick="restartAccel()">Reiniciar</button>
+        <button data-theme="a" onclick="stopWatchAccel()">Detener</button>
+        <button data-theme="a" onclick="startWatchAccel()">Continuar</button>
     </body>
 </html>
