@@ -61,9 +61,10 @@ function onSuccess(acceleration) {
     
     var stepForce = ((acceleration.x * acceleration.x) + (acceleration.y * acceleration.y) + (acceleration.z * acceleration.z)) / (9.78 * 9.78);
 
-    element.innerHTML = 'Acceleration X: ' + after_axisX + '<br />'
-            + 'Acceleration Y: ' + after_axisY + '<br />'
-            + 'Acceleration Z: ' + after_axisZ + '<br />'
+    element.innerHTML = 'Información de los ejes:'
+            +'Acceleration X: ' + acceleration.x + '<br />'
+            + 'Acceleration Y: ' + acceleration.y + '<br />'
+            + 'Acceleration Z: ' + acceleration.z + '<br />'
             + '<br><br>'
             + 'Step Force: ' + stepForce;
 
