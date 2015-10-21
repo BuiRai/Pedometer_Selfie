@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="UTF-8">
+        <title>Pedometer_Selfie</title>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/compass.js"></script>
+        <script type="text/javascript" src="js/accel.js"></script>
+    </head>
+    <body>
+    	<p id="axisInfo"></p>
+    	<p id="steps"></p>
+        <canvas id="compass" width="200" height="200"></canvas>
+        <div id="infoCompass">Valor: </div>
+        <button onclick="startWatchAccel()">Comenzar el podometro</button>
+        <button onclick="restartAccel()">Reiniciar</button>
+        <button onclick="stopWatchAccel()">Detener</button>
+        <button onclick="startWatchAccel()">Continuar</button>
+    </body>
+</html>
